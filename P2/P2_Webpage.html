@@ -16,12 +16,12 @@
 
       .theegrid{
         display: grid;
-        grid-template-columns:3;
+        grid-template-columns:1fr 1fr 1fr;
         grid-template-rows: 24;
-        margin:100px;
+        margin:100px auto;
         grid-gap: 20px;
         align-items: center;
-      }
+}
 
       h2{
         font-size: 50px;
@@ -33,8 +33,8 @@
       }
 
       #HamH1{
-      grid-row: 1;
-
+grid-column: span 3;
+  width:100%;
       }
 
    
