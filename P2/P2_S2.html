@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-size: 16px;
+      }
+
+      #myGrid {
+        margin:100px;
+        
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+
+      }
+
+      h1 {
+        grid-column: span 3;
+        text-align: center;
+      }
+
+      h2 {
+        grid-column: span 2;
+        text-align: center;
+      }
+
+      .bar{
+        grid-column: span 5;
+      }
+
+      .image{
+        grid-column: span 3;
+      }
+
+      #headline2{
+        grid-column: span 2;
+      }
+      
+    </style>
+
+  </head>
+  <body>    
+  <div id="myGrid">
+
+  <p>The Weather</p>
+  <h1>The Washington Post</h1>
+  <p>Final</p>
+
+<div class="bar">
+  <hr>
+ <p> text</p>
+  <hr>
+</div>
+
+<div class="image">
+  <img src="https://cdn.glitch.com/9da2d04c-f441-4bba-9424-7a62ae9a19c4%2Fmoonlanding.png?1518079708582">
+    </div>
+    
+<div id="headline2">
+<h2>TEXT<br>TextHEADLINEText<br>Text<br></h2></div>
+
+</div>
+  </body>
+</html>
