@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <title>History of the Hamburger Menu</title>
@@ -79,16 +79,19 @@
       }
 
       #XP{
-        grid-column: 2;
+        grid-column: span 2;
       }
       
-      #usesamp{
+      /*#usesamp{
         grid-column-start: 2;
         grid-column-end: 3;
-      }
+      */}
 
       #BG1{
         grid-column: span 1;
+      }
+      .twoColumn {
+        grid-column: span 2; 
       }
     </style>
     
@@ -112,9 +115,11 @@
   <!--xerox ref; "Xerox Star, 1981"-->
 
     <img id="XP" src="hamburger research/xerox.gif">
+      <div class="twoColumn">
       <h1>Xerox Star, 1981</h1>
       <p>The Star workstation, officially named Xerox 8010 Information System, was the first commercial system to incorporate various technologies that have since become standard in personal computers, including a bitmapped display, a window-based graphical user interface, icons, folders, mouse(two-button), Ethernet networking, file servers, print servers, and e-mail.</p>
-  </div>
+    </div>
+  
   <hr>
 
   <h2 style="color:white; background-color:green;">Inspiration Evolution</h2>
@@ -145,16 +150,16 @@
     <img id="spotify" src="hamburger research/spotify-android.jpg">
 
   <!-- bar comparison img-->
-    <img id="3way" src="hamburger research/3waycomp.jpg">
+    <img id="3way" class="twoColumn" src="hamburger research/3waycomp.jpg">
 
   <!-- use samples... spotify / twitter / -->
-    <img id="usesamp" src="hamburger research/usesamp.jpg">
+    <img id="usesamp" class="twoColumn" src="hamburger research/usesamp.jpg">
   <hr>
 
 <h2 style="color:blue; background-color:gray;"">Interaction Samples</h2>
 
 <!-- interactions column-->
-    <div class="burgif">
+    <!-- <div class="burgif"> -->
 
     <img id="BG1" src="hamburger research/newton-hamburger.gif">
 
@@ -163,7 +168,7 @@
     <img id="BG3" src="hamburger research/chrome-hamburger.gif">
 
     <img id="BG4" src="hamburger research/scripted-hamburger.gif">
-  </div>
+  <!-- </div> -->
 
    <hr>
   <h2 style="color:yellow; background-color:black;">Does the Hamburger have a Ham-future?</h2>
