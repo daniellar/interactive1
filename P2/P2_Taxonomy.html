@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <title>Hamburger Tones</title>
+
+
+<script>
+
+
+
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "50%";
+    document.getElementById("main").style.marginLeft = "50%";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
+
+</script>
+<style>
+
+
+.div{
+	align-content: center;
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+/* The side navigation menu */
+.sidenav {
+   /* height: 75%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav img{
+    height:4vh;
+    display:block;
+    padding: 10px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+    height: 60%;
+}
+#main img {
+    height:3vh;
+    display:block;
+    padding: 10px;
+}
+
+
+#color {
+     padding: 25px;
+     position: bottom;
+     text-align: center;
+     height: 200px;
+
+ }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+
+ }
+
+</style>
+</head>
+<body>
+
+<!-- NAV INFO -->
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br>
+    <img src="EZ/IMG_0196.png">     
+    <img src="EZ/IMG_0194.png">     
+    <img src="EZ/IMG_0197.png">     
+    <img src="EZ/IMG_0195.png">     
+    <img src="EZ/IMG_0190.png">     
+    <img src="EZ/IMG_0192.png">     
+    <img src="EZ/IMG_0193.png">     
+    <img src="EZ/yelp crop.png">    
+    <img src="EZ/IMG_0151.png">     
+    <img src="EZ/IMG_0150.png">
+   
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()"><div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div></span>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+   <img src="EZ/alexa crop 1.png">  
+    <img src="EZ/alexa crop 2.png"> 
+    <img src="EZ/fbcrop.png">       
+    <img src="EZ/imgblk.png">       
+    <img src="EZ/IMG_0191.png">     
+    <img src="EZ/IMG_0189.png">     
+    <img src="EZ/IMG_0188.png">     
+    <img src="EZ/IMG_0154.png">     
+    <img src="EZ/IMG_0157.png">     
+    <img src="EZ/IMG_0155.png">     
+    <img src="EZ/IMG_0153.png">     
+</div>
+
+<h2 align="center">Color Alternatives</h2>
+<div id="color">
+	 <img src="EZ/clr1.png" height="75" width="75">
+	 <img src="EZ/clr2.png" height="75" width="75">
+	 <img src="EZ/clr3.png" height="75" width="75">
+	 <img src="EZ/clr4.png" height="75" width="75">
+	 <img src="EZ/clr5.png" height="75" width="75">
+	 <img src="EZ/clr6.png" height="75" width="75">
+	 <img src="EZ/clr7.png" height="75" width="75">
+	 <img src="EZ/clr8.png" height="75" width="75">
+	 <img src="EZ/clr9.png" height="75" width="75">
+	 <img src="EZ/clr10.png" height="75" width="75">
+	 <img src="EZ/clr11.jpg" height="75" width="75">
+	 </div>
