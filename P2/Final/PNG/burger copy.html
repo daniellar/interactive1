@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <title>IRLBURG</title>
+
+<Style>
+/**
+ * Splay circles from top along a circular path
+ * http://stackoverflow.com/questions/18735723/spherical-motion-around-object-using-javascript
+ */
+
+@keyframes rotate {
+	0%, 50% {
+		transform: rotate(0deg) translateY(-150px) rotate(0deg);
+	}
+}
+
+#centre {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: rotateZ(0.01deg); /* IE 10 bug */
+}
+
+.pik {
+	border-radius: 65%;
+	position: absolute;
+}
+
+.middle {
+	height: 200px;
+	width: 200px;
+	left: -100px;
+	top: -100px;
+	position: relative;
+}
+
+.outer {
+	height: 60px;
+	width: 60px;
+	left: -30px;
+	top: -30px;
+}
+.explode .outer {
+	animation: rotate 2s ease-out 1;
+}
+
+.at-8-oclock {
+	transform: rotate(-45deg) translateY(-200px) rotate(45deg);
+}
+
+.at-10-oclock {
+	transform: rotate(-90deg) translateY(-200px) rotate(90deg);
+}
+
+.at-12-oclock {
+	transform: rotate(0deg) translateY(-200px) rotate(0deg);
+	z-index: 2;
+}
+
+.at-2-oclock {
+	transform: rotate(45deg) translateY(-200px) rotate(-45deg);
+	z-index: 1;
+}
+
+.at-4-oclock {
+	transform: rotate(90deg) translateY(-200px) rotate(-90deg);
+}
+
+.at-6-oclock {
+	transform: rotate(135deg) translateY(-200px) rotate(-135deg);
+}
+
+.at-8s-oclock {
+	transform: rotate(180deg) translateY(-200px) rotate(-180deg);
+}
+
+.at-10s-oclock {
+	transform: rotate(225deg) translateY(-200px) rotate(-225deg);
+}
+
+
+
+</Style>
+
+<div id="centre">
+
+	<img src="burger.jpg" class="middle">
+	  
+	<img src="topbun.png" class="outer pik at-8-oclock"> 
+	<img src="onion.png" class="outer pik at-10-oclock">   
+	<img src="pickles.png" class="outer pik at-12-oclock">
+	<img src="tomatoe.png" class="outer pik at-2-oclock">
+	<img src="lettuce.png" class="outer pik at-4-oclock">
+	<img src="cheese.png" class="outer pik at-6-oclock">
+	<img src="meat.png" class="outer pik at-8s-oclock">
+	<img src="btmbun.png" class="outer pik at-10s-oclock">
+
+</div>
+
+<script>
+
+let hamburger = document.querySelector('#centre')
+hamburger.addEventListener('pointerup',function(){
+
+	hamburger.classList.toggle('explode')	
+})
+
+</script>
