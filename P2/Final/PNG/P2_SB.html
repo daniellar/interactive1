@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <title>IRLBURG</title>
+
+<style>
+
+
+#burger {
+	position: relative;
+	margin: 0 auto;
+	height: 4in;
+}
+
+#burger img{
+	margin: 0 auto;
+	width: 2in;
+	height: 2in;
+
+}
+
+
+/*#hamburger {
+	
+}
+*/
+#topbun {
+	position: absolute;
+	top:0;
+	left:0;
+	transition: 800ms all ease-in-out;
+}
+
+#btmBun {
+	transition: 800ms all ease-in-out;
+}
+
+#cheese {
+	transition: 800ms all ease-in-out;
+}
+
+#lettuce {
+	transition: 800ms all ease-in-out;
+}
+
+#pickles {
+	transition: 800ms all ease-in-out;
+}
+
+#tomatoe {
+	transition: 800ms all ease-in-out;
+}
+
+#onion {
+	transition: 800ms all ease-in-out;
+}
+
+#hamburger.explode #topBun {
+	transform: translate(0,-200px);
+}
+
+#hamburger.explode #btmbun {
+	transform: translate(0,-200px);
+}
+
+#hamburger.explode #onion {
+	transform: translate(0,-200px);
+}
+
+#hamburger.explode #pickles {
+	transform: translate(0,-200px);
+}
+
+#hamburger.explode #tomatoe {
+	transform: translate(0,-200px);
+}
+
+#hamburger.explode #lettuce {
+	transform: translate(0,-200px);
+}
+
+#hamburger.explode #cheese {
+	transform: translate(0,-200px);
+}
+
+#hamburger.explode #meat {
+	transform: translate(0,-200px);
+}
+
+#hamburger.explode #btmbun {
+	transform: translate(0,-200px);
+}
+</style>
+
+ 
+
+<body>
+
+
+
+<div id="hamburger" >
+	<center>
+	<img src="burger.jpg" id="burger">
+	<img src="topbun.png" id="topbun">
+	<img src="onion.png" id="onion">
+	<img src="pickles.png" id="pickles">
+	<img src="tomatoe.png" id="tomatoe">
+	<img src="lettuce.png" id="lettuce">
+	<img src="cheese.png" id="cheese">
+	<img src="meat.png" id="meat">
+	<img src="btmbun.png" id="btmbun">
+
+</div>
+
+
+<script>
+
+let hamburger = document.querySelection('#hamburger')
+hamburger.addEventListener('pointerup',function(){
+	hamburger.classList.toggle('explode')	
+})
+
+</script>
