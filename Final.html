@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		body{
+		font-family: Instant;
+		text-align: center;
+		background-color: #F9EE14;
+		background: linear-gradient(white, yellow);
+		min-height: 100vh;
+		}
+		.container, .container2 {
+			height: 100vh;
+		margin: 0;
+		}
+		.container2{
+			padding: 45px;
+			height: calc(100vh - 90px)
+		}
+		#HeaderBar{
+		width: 100%;
+		padding-top: 10%;
+		font-size: 200px;
+		}
+		#supptxt{
+			font-size: 75px;
+			padding: 30px;
+		}
+		#sum3,{
+			font-weight: bold;
+			font-size: 16pt;
+		}
+		#name, #one, #closer, #name2{
+			font-weight: bold;
+			font-size: 100px;
+			color: green;
+		}
+		#summary{
+			font-size: 16pt;
+		}
+		#data{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		}
+		#row {
+			justify-items: center;
+			display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		}
+		#row img {
+			width:300px;
+			height: 500px;
+		}
+		.row2 {
+			justify-items: center;
+			display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		height: 55vh;
+		}
+		#sum2 {
+			display: none;
+		}
+		#sum2.showSum2 {
+			display: block;
+		}
+		@media screen {
+			.printOnly {
+				display:none;
+			}
+		}
+		@media print {
+			#sum2.showSum2 {
+				display: none;
+			}
+			.screenOnly {
+				display:none;
+			}
+			.container{
+				height: auto;
+			}
+			#title, #name2 {
+				font-weight: bold;
+				font-size: 65pt;
+				color: green;
+			}
+
+			#directive {
+				font-size: 16pt;
+			}
+
+			#pix {
+			justify-items: center;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			margin: 50px 0;
+		}
+		#pix img {
+			width:300px;
+			height: 500px;
+		}
+			
+		.row2{
+			justify-items: center;
+    	display: block;
+    	align-items: center;
+    	height: auto;
+		}
+
+		.pie {
+		margin-top: 50px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container screenOnly">
+			<div id="HeaderBar" class="screenOnly">
+				WELCOME
+			</div>
+			<div id="supptxt" class="screenOnly">
+				to the
+			</div>
+			<div id="name" class="screenOnly">
+				TIME SPENT INITIATIVE
+			</div>
+			<br>
+			<input id="jump1" type="button" onclick="window.scrollTo(0,window.innerHeight)" value="Explore" class="screenOnly">
+		</div>
+		<div class="container2 screenOnly">
+			<br>
+			<div id="summary" class="screenOnly">
+				By guiding you through a short exercise,
+				TSI aims to grow your self-awareness.<br>
+				Investigate your weekly cell usage statistics
+				and gain valuable insight in to your priorities.
+			</div>
+			<br>
+			<font color="green"> <b>Follow the selection flow below to gain entry to your data for the next exercise.</b> </font>
+			<br>
+			<br>
+
+			<div id="row" class="screenOnly" >
+				<img src="P3/Settings.PNG">
+				<img src="P3/Battery.PNG">
+				<img src="P3/Data.PNG">
+			</div>
+			<br>
+			<input id="jump2" type="button" onclick="window.scrollTo(0,window.innerHeight * 2)" value="Synthesize" class="screenOnly">
+		</div>
+		<div class="container">
+			<div id="one" class="screenOnly">
+				Reflect
+			</div>
+			<div id="sum3" class="screenOnly">
+				Enter your top 10 most time committed categories.
+			</div>
+			<div class="row2">
+				<div class="screenOnly">
+					<div id="data">
+						<form class="screenOnly">
+							1 Instagram: <input type="number" placeholder="In 100% percentage.." id="first" name="first" max="100"><br/>
+							2 Facebook: <input type="number" placeholder="In 100% percentage.." id="second" name="second" max="100" ><br>
+							3 Messages: <input type="number" placeholder="In 100% percentage.." id="third" name="third" max="100"><br/>
+							4 Snapchat: <input type="number" placeholder="In 100% percentage.." id="fourth" name="fourth" max="100"><br>
+							5 Maps: <input type="number" placeholder="In 100% percentage.." id="fifth" name="fifth" max="100"><br>
+							6 Music: <input type="number" placeholder="In 100% percentage.." id="sixth" name="sixth" max="100"><br>
+							7 Web: <input type="number" placeholder="In 100% percentage.." id="seventh" name="seventh" max="100"><br>
+							8 Rideshare: <input type="number" placeholder="In 100% percentage.." id="eighth" name="eighth" max="100"><br>
+							9 Other: <input type="number" placeholder="In 100% percentage.." id="ninth" name="ninth" max="100"><br>
+							10 Other: <input type="number" placeholder="In 100% percentage.." id="tenth" name="tenth" max="100"><br>
+						</form>
+					</div>
+					<br>
+					<input type="submit" name="submit" value="Generate Pie Chart" style="margin-bottom: 30px;" id="plotSubmit">
+				</div>
+
+			<section>
+				<div id="pie">
+					<canvas id="canvas" width="400" height="300">
+					This text is displayed if your browser does not support HTML5 Canvas.
+					</canvas>
+				</div>
+			</section>	
+
+			</div>
+
+
+			<div id="title" class="printOnly">
+				How is my time spent?
+			</div>
+			<br>
+			
+			<br>
+			<div id ="directive" class="printOnly">
+				Follow the selection flow below to gain entry to your data for the next exercise.
+			</div>
+			<br>
+			<div id="pix" class="printOnly" >
+				<img src="P3/Settings.PNG">
+				<img src="P3/Battery.PNG">
+				<img src="P3/Data.PNG">
+			</div>
+			
+			<div id="sum2" class="screenOnly">
+				A physical artifact of your journey, we have created a poster featuring your personal pie chart.<br>
+				Select the print button to  share your awareness with those around you, while reminding yourself...<br>
+			<span class="name2"> How is my time spent?</span>
+			</div>
+
+	<div id="name2" class="printOnly">
+	TIME SPENT INITIATIVE
+	</div>
+	<div>
+	<input type="button" value="PRINT ME" id="printButton" class="screenOnly">
+	</div>
+	<br>
+	<div class="screenOnly">*Turn color on in printer settings.s </div>
+		</body>
+	</html>
+
+
+	<script type="text/javascript">
+		
+	var myColor = ["#ECD078", "#D95B43", "#C02942", "#542437", "#53777A"];
+	var myData = [100,20,20,20,20];
+	function getTotal() {
+	var myTotal = 0;
+	for (var j = 0; j < myData.length; j++) {
+	myTotal += (typeof myData[j] == 'number') ? myData[j] : 0;
+	}
+	return myTotal;
+	}
+	function plotData() {
+	var canvas;
+	var ctx;
+	var lastend = 0;
+	var myTotal = getTotal();
+	canvas = document.getElementById("canvas");
+	var halfWidth = canvas.width/2
+	var halfHeight = canvas.height/2
+	ctx = canvas.getContext("2d");
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	for (var i = 0; i < myData.length; i++) {
+	ctx.fillStyle = myColor[i];
+	ctx.beginPath();
+	ctx.moveTo(200, 150);
+	ctx.arc(200, 150, 150, lastend, lastend + (Math.PI * 2 * (myData[i] / myTotal)), false);
+	ctx.lineTo(200, 150);
+	ctx.fill();
+	lastend += Math.PI * 2 * (myData[i] / myTotal);
+	}
+	}
+	function generatePie() {
+	myData[1] = document.getElementById("first").value;
+	myData[2] = document.getElementById("second").value;
+	myData[3] = document.getElementById("third").value;
+	myData[4] = document.getElementById("fourth").value;
+	myData[5] = document.getElementById("fifth").value;
+	myData[6] = document.getElementById("sixth").value;
+	myData[7] = document.getElementById("seventh").value;
+	myData[8] = document.getElementById("eighth").value;
+	myData[9] = document.getElementById("ninth").value;
+	myData[10] = document.getElementById("tenth").value;
+	
+	sum2.classList.add('showSum2')
+	plotData();
+	}
+	document.getElementById("plotSubmit").onclick = generatePie;
+	document.getElementById("printButton").onclick = function(){
+		window.print()
+	}
+	/* plotData(); */
+	</script>

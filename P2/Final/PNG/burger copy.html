@@ -21,7 +21,8 @@
 	position: fixed;
 	left: 50%;
 	top: 50%;
-	transform: rotateZ(0.01deg); /* IE 10 bug */
+	transform: rotateZ(0.01deg);
+	/* IE 10 bug */
 }
 
 .pik {
@@ -35,9 +36,10 @@
 	left: -100px;
 	top: -100px;
 	position: relative;
+	z-index: 100; 
 }
 
-.outer {
+ .outer {
 	height: 60px;
 	width: 60px;
 	left: -30px;
@@ -47,37 +49,37 @@
 	animation: rotate 2s ease-out 1;
 }
 
-.at-8-oclock {
+.explode .at-8-oclock {
 	transform: rotate(-45deg) translateY(-200px) rotate(45deg);
 }
 
-.at-10-oclock {
+.explode .at-10-oclock {
 	transform: rotate(-90deg) translateY(-200px) rotate(90deg);
 }
 
-.at-12-oclock {
+.explode .at-12-oclock {
 	transform: rotate(0deg) translateY(-200px) rotate(0deg);
 	z-index: 2;
 }
 
-.at-2-oclock {
+.explode .at-2-oclock {
 	transform: rotate(45deg) translateY(-200px) rotate(-45deg);
 	z-index: 1;
 }
 
-.at-4-oclock {
+.explode .at-4-oclock {
 	transform: rotate(90deg) translateY(-200px) rotate(-90deg);
 }
 
-.at-6-oclock {
+.explode .at-6-oclock {
 	transform: rotate(135deg) translateY(-200px) rotate(-135deg);
 }
 
-.at-8s-oclock {
+.explode .at-8s-oclock {
 	transform: rotate(180deg) translateY(-200px) rotate(-180deg);
 }
 
-.at-10s-oclock {
+.explode .at-10s-oclock {
 	transform: rotate(225deg) translateY(-200px) rotate(-225deg);
 }
 
